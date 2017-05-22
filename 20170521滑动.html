@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滑动测试</title>
+	<script src="jquery-3.2.1.min.js"></script>
+	
+	<style type="text/css"> 
+		#panel,#flip
+		{
+			padding:5px;
+			text-align:center;
+			background-color:#e5eecc;
+			border:solid 1px #c3c3c3;
+		}
+		#panel
+		{
+			padding:50px;
+			display:none;
+		}
+	</style>
+	
+	<script>
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideToggle("slow");	//slideDown()  slideUp()  你懂的这两个函数是干嘛的，只演示Toggle的那个
+			});		
+		});
+	</script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#ajaxt1").load("./text/ajax1.txt");
+		
+		});
+	</script>
+</head>
+<body>
+
+	<div id="flip">下滑/上拉</div>
+	<div id="panel">Hello world!</div>
+	
+	<div id="ajaxt1"></div>
+
+	
+</body>
+</html>
