@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0523第一次Angular1测试</title>
+	<script src="./js/angular.min.js" ></script>
+	<script>
+		var myApp= angular.module('myApp',[]);
+		myApp.controller('aCtrl',function($scope){
+			$scope.quantity=1;
+			$scope.const=5;
+			$scope.firstName='guo';
+			$scope.lastName='yuefei'
+		});
+		
+		myApp.controller('myCtrl',function($scope){
+			$scope.name = "郭";
+		});
+		
+		function focus_changebg(x){
+			x.style.background="#f1f1f1";
+		};
+		
+		function blur_changebg(x){
+			x.style.background="000000";
+		}
+
+		
+	</script>
+</head>
+<body>
+	<!--angular的初始化,后面还有更好的初始化方式，但是写的字多了点-->
+	<div ng-app="myApp" >						<!--ng-init="quantity=1;const=5;firstName='guo';lastName='yuefei'"-->
+		<div ng-controller="aCtrl">
+			<p>我的第一个AngularJs表达式：{{5+5}}</p>
+			<p>总价：{{quantity*const}}</p>
+			<p>我是：{{firstName+lastName}}</p>
+		</div>
+		<div  ng-controller="myCtrl">
+			<p> 请输入你姓名：</p>
+			<input type="text" ng-model="Name" onfocus="focus_changebg(this)" onblur="blur_changebg(this)"/>
+			<p>hello! {{ Name }}</p>		
+		</div>
+	<div>
+</body>
+</html>
