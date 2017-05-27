@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>0523第一次Angular1测试</title>
+	<link rel="stylesheet" href="./css/style.css">
 	<script src="./js/angular.min.js" ></script>
 	<script>
 		var myApp= angular.module('myApp',[]);
@@ -16,15 +17,25 @@
 		myApp.controller('myCtrl',function($scope){
 			$scope.name = "郭";
 		});
-		
+		//输入聚焦改变颜色的
 		function focus_changebg(x){
 			x.style.background="#f1f1f1";
 		};
 		
 		function blur_changebg(x){
-			x.style.background="000000";
+			x.style.background="#000000";
 		}
-
+		
+		myApp.directive("myDir",function(){
+			return{
+				template:"<h3>这是我的自定义指令</h3>"			//这里不能有分号
+			};
+		});
+		//自定义指令
+		myApp.controller("repeatest",function($scope){
+			$scope.names=[{name:"Jone",country:"UK"},{name:"stefan",country:"US"},{name:"Hege",country:"Au"}];
+		
+		});
 		
 	</script>
 </head>
@@ -40,6 +51,22 @@
 			<p> 请输入你姓名：</p>
 			<input type="text" ng-model="Name" onfocus="focus_changebg(this)" onblur="blur_changebg(this)"/>
 			<p>hello! {{ Name }}</p>		
+		</div>
+		<my-dir></my-dir>
+		<div my-dir></div>
+		
+		<!--这里试验了repeat命令，可以方便的制作表格-->
+		<div ng-controller="repeatest">
+			<table>
+				<tr>
+					<th>name</th>
+					<th>country</th>
+				</tr>
+				<tr ng-repeat="x in names">
+					<td>{{x.name}}</td>
+					<td>{{x.country}}</td>
+				</tr>
+			</table>
 		</div>
 	<div>
 </body>

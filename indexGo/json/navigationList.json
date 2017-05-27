@@ -1,0 +1,11 @@
+
+{
+	
+	"comment" : "这个是导航条显示的json数据",
+	"naviList":[
+		{"name": "About" , "link" : "./about.html"},
+		{"name": "Code" , "link" : "./code.html"},
+		{"name" : "Mood" , "link" : "./mood.html"}
+	]
+
+}

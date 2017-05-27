@@ -1,0 +1,13 @@
+
+table,td,th{
+	border-width:2px;
+	border-style:outset;
+	border-color:green;
+	text-align:center;
+}
+
+
+th{
+	background-color:#11ed11;
+	color:white;
+}
