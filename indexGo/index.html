@@ -8,7 +8,7 @@
 	<script src="./js/jquery-3.2.1.min.js"></script>
 	<script src="./js/index.js"></script>
 </head>
-<body>
+<body >
 	<div id="flip">MENU</div>
 	<div id="panel" ng-controller="reList">
 		<ul>
@@ -17,6 +17,6 @@
     </div>
     
     <p id="p1"></p>
-	<div id="main"></div>
+	<div id="main" ng-controller="mainView" ng-init="toHome()"></div>
 </body>
 </html>
