@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="codeApp">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
+	<!-- code页面的 -->
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/code.js" ></script>
+<title>code</title>
 </head>
 <body>
 <h1>
 我是code页面
 </h1>
+<div ng-controller="showCode"> 
+	<code id="showc">
+		{{codes}}
+	
+	</code>
+	
+
+
+</div>
+
 
 </body>
 </html>
