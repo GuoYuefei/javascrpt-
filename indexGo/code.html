@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="codeApp">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-
-	<!-- code页面的 -->
-	<script type="text/javascript" src="./js/angular.min.js"></script>
-	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="./js/code.js" ></script>
+<link rel="stylesheet" href="./css/code.css">
+<!-- code页面的 下面的引入有木有都无关首页展示 -->
+<script type="text/javascript" src="./js/angular.min.js"></script>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/code.js"></script>
 <title>code</title>
 </head>
 <body>
-<h1>
-我是code页面
-</h1>
-<div ng-controller="showCode"> 
-	<code id="showc">
-		{{codes}}
-	
-	</code>
-	
-
-
-</div>
-
-
+	<div id="jqhead">
+		<h1>我是code页面</h1>
+	</div>
+	<div id="drap">
+		<div id="jq-content">
+			<ul id="jqbody-menu">
+				<li><a href="">试验</a></li>
+				<li><a href="">试验</a></li>
+				<li><a href="">试验</a></li>
+				<li><a href="">试验</a></li>
+				<li><a href="">试验</a></li>
+			</ul>
+			<div id="jqbody-content">
+				<div class='body-wrap'>
+					<pre id="showc">
+						{{codes}}
+					</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="jqfoot">Foot</div>
 </body>
 </html>

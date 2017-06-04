@@ -8,7 +8,7 @@
 //});
 //<button type="button" id = "b1">实验</button>
 
-var myApp = angular.module('codeApp',[]);
+//var myApp = angular.module('codeApp',[]);
 
 myApp.controller("showCode",function($scope){
 
@@ -22,12 +22,6 @@ myApp.controller("showCode",function($scope){
 	    async : false 
 	});  
 	temp = jQuery.get("./public/code/linear_list/LinearList.h",function(data,status){
-////		jQuery("showc").text(data);
-		
-//		$scope.codes = 1111;
-//		console.log(data);
-//		$scope.codes = data;
-//		console.log($scope.codes);
 	});
 	
 	$scope.codes = temp.responseText;
